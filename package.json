@@ -1,0 +1,30 @@
+{
+  "name": "bsa-intake-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "scripts": {
+    "dev": "node --watch --experimental-strip-types src/server.ts",
+    "start": "node --experimental-strip-types src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "db:migrate": "node --experimental-strip-types src/database/migrate.ts"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.0.0",
+    "@fastify/helmet": "^13.0.0",
+    "@fastify/multipart": "^9.0.0",
+    "@fastify/rate-limit": "^10.0.0",
+    "fastify": "^5.0.0",
+    "mongodb": "^6.0.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "mongodb-memory-server": "^10.0.0",
+    "typescript": "^5.0.0"
+  }
+}
